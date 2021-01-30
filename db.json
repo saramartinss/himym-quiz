@@ -1,9 +1,60 @@
 {
     "bg": "https://www.itl.cat/pngfile/big/107-1078833_how-i-met-your-mother-met-your-mother.jpg",
     "title": "Quiz sobre HIMYM",
-    "description": "Descrição",
-    "questions": [],
-    "external": [],
+    "description": "Quiz sobre o seriado How I Met Your Mother",
+    "questions": [{
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO99g1Ha9IrV5DOfg52ycFMywgziFXyRPDAw&usqp=CAU",
+            "title": "Qual o nome de cada personagem?",
+            "description": "easy one",
+            "answer": 1,
+            "alternatives": [
+                "Ted Mosby, Robin Scevartsky, Barney Stanson, Marshall Erikson e Lily Aldrin.",
+                "Ted Mosby, Robin Scherbatsky, Barney Stinson, Marshall Eriksen e Lily Aldrin.",
+                "Ted Mosbys, Robin Scherbatsky, Barney Stanson, Marshall Eriksen e Lily Aldrey.",
+                "Ted Mosby, Robin Scherbatsky, Barney Stanley, Marshall Erickson e Lily Adrin."
+            ]
+        },
+        {
+            "image": "https://static.quizur.com/i/b/577dcd5389e2e3.20152421Nothing%20Good%20Happen%20After%202%20am.gif",
+            "title": "Qual é uma das lições de Ted Mosby?",
+            "description": "É o nome de um episódio da série",
+            "answer": 0,
+            "alternatives": [
+                "Nada de bom acontece depois das 2h da manhã.",
+                "Nada de bom acontece depois das 3h da manhã.",
+                "Não há nada de bom depois das 4h da manhã.",
+                "Nada que preste acontece de madrugada."
+            ]
+        },
+        {
+            "image": "https://static.quizur.com/i/b/577dd21de0d2f2.78120994Tracy%20Mosby.jpg",
+            "title": "Qual o nome da Mãe, a mulher de Ted e mãe de seus filhos?",
+            "description": "The One",
+            "answer": 3,
+            "alternatives": [
+                "Tina Mosby",
+                "Terese Mosby",
+                "Taylor Mosby",
+                "Tracy Mosby"
+            ]
+        },
+        {
+            "image": "https://4.bp.blogspot.com/-cTQcXEgnRuo/XHtG57Th60I/AAAAAAAAPmg/EPKucHGYYtcXRe_IPgmEEZZ42d-Y3AF1gCLcBGAs/s640/himym06_cobie_yellow_1401_r2.jpg",
+            "title": "Qual a bebida favorita de Robin Scherbatsky?",
+            "description": "",
+            "answer": 0,
+            "alternatives": [
+                "Whisky",
+                "Cerveja",
+                "Tequila",
+                "Vinho"
+            ]
+        }
+    ],
+    "external": [
+        "https://aluraquiz-css.omariosouto.vercel.app",
+        "https://aluraquiz-marvel.omariosouto.vercel.app"
+    ],
     "theme": {
         "colors": {
             "primary": "#00a152",

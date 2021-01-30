@@ -1,7 +1,7 @@
-import React from "react";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import Head from "next/head";
-import db from "../db.json";
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
