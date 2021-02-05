@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "../../components/Link";
 import Widget from "../../components/Widget";
 import QuizLogo from "../../components/QuizLogo";
 import QuizBackground from "../../components/QuizBackground";
@@ -43,6 +44,11 @@ function ResultWidget({ results }) {
             );
           })}
         </ul>
+        <div style={{ textAlign: "center" }}>
+          <Button as={Link} href="/" style={{ textDecoration: "none" }}>
+            Jogar novamente
+          </Button>
+        </div>
       </Widget.Content>
     </Widget>
   );
