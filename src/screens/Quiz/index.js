@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Widget from "../../components/Widget";
 import QuizLogo from "../../components/QuizLogo";
 import QuizBackground from "../../components/QuizBackground";
@@ -6,6 +7,7 @@ import QuizContainer from "../../components/QuizContainer";
 import Button from "../../components/Button";
 import AlternativesForm from "../../components/AlternativesForm";
 import BackLinkArrow from "../../components/BackLinkArrow";
+import db from "../../../db.json";
 
 function ResultWidget({ results }) {
   return (
@@ -25,11 +27,21 @@ function ResultWidget({ results }) {
           perguntas
         </h3>
         <ul>
-          {results.map((result, index) => (
-            <li key={`result__${index}`}>
-              #{index + 1}: {result === true ? "Acertou mizerávi" : "EROOOOOU"}
-            </li>
-          ))}
+          {results.map((result, index) => {
+            const actualQuestion = db.questions[index];
+            return (
+              <li key={`result__${index}`}>
+                <Widget.Topic>
+                  {index + 1}:{" "}
+                  {result === true
+                    ? "Muito bem, resposta certa!"
+                    : `Você errou. A resposta correta é ${
+                        actualQuestion.alternatives[actualQuestion.answer]
+                      }`}
+                </Widget.Topic>
+              </li>
+            );
+          })}
         </ul>
       </Widget.Content>
     </Widget>
@@ -38,9 +50,17 @@ function ResultWidget({ results }) {
 
 function LoadingWidget() {
   return (
-    <Widget>
-      <Widget.Header>Carregando...</Widget.Header>
-      <Widget.Content>[Desafio do Loading]</Widget.Content>
+    <Widget
+      as={motion.header}
+      initial={{ scale: 0 }}
+      animate={{ rotate: 360, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
+      <Widget.Header>Wait for it...</Widget.Header>
     </Widget>
   );
 }

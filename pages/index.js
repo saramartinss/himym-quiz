@@ -56,7 +56,7 @@ export default function Home() {
                 value={name}
               />
               <Button type="submit" disabled={!name}>
-                Vamos jogar, {name}
+                Vamos jogar {name}
               </Button>
             </form>
           </Widget.Content>
@@ -72,7 +72,7 @@ export default function Home() {
           animate="show"
         >
           <Widget.Content>
-            <h2>Quizes da Galera...</h2>
+            <h2>Outros quizes...</h2>
             <ul>
               {db.external.map((linkExterno, index) => {
                 const [projectName, githubUser] = linkExterno
